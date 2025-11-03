@@ -1,106 +1,46 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới thiệu bản thân 💗</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu bản thân - [Nguyễn Trần Thùy Dương]</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff9ec4, #ff5f9e);
-      color: white;
-      text-align: center;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f2f2f2;
+      color: #333;
     }
-
-    h1 {
-      margin-top: 100px;
-      font-size: 2.8em;
-      letter-spacing: 1px;
-      color: #fff;
-      text-shadow: 2px 2px 10px rgba(255, 0, 90, 0.3);
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
     img {
       border-radius: 50%;
       width: 150px;
       height: 150px;
       object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-      margin-top: 20px;
     }
-
-    p {
-      font-size: 1.2em;
-      margin: 15px 0;
-    }
-
-    a {
-      color: #ffe6f0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      font-size: 0.9em;
-      color: #fff;
-    }
-
-    /* Hiệu ứng trái tim */
-    .heart {
-      position: fixed;
-      bottom: 0;
-      font-size: 20px;
-      color: #fff;
-      opacity: 0.8;
-      animation: float 6s linear infinite;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.5);
-        opacity: 0;
-      }
+    h1 {
+      color: #007acc;
     }
   </style>
 </head>
 <body>
-  <h1>💗 Xin chào, mình là Nguyễn Trần Thùy Dương 💗</h1>
-  <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="Ảnh đại diện">
-  <p>💪 tôi là môt cô gái xinh đẹp và đảm đang.</p>
-  <p>🌸 Sở thích:nấu ăn, thích tiêu tiền mua quần áo .</p>
-  <p>📧 Email: <a href="mailto:nguyentranthuyduong77@gmail.com">nguyentranthuyduong77@gmail.com</a></p>
-  <p>🌐 GitHub: <a href="https://github.com/ThuyDuong2105">github.com/ThuyDuong2105</a></p>
-
-  <footer>💖 Made with love by Nguyễn Trần Thùy Dương💖</footer>
-
-  <script>
-    // Tạo hiệu ứng trái tim bay
-    const body = document.body;
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
-      heart.innerHTML = '💗';
-      body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 7000);
-    }
-    setInterval(createHeart, 500);
-  </script>
+  <div class="container">
+    <img src="your-photo.jpg" alt="Ảnh cá nhân">
+    <h1>Xin chào! Mình là [Nguyễn Trần Thùy Dương] 👋</h1>
+    <p>Mình đang là cô gái xinh đẹp và dễ thương.</p>
+    <h2>Liên hệ</h2>
+    <ul>
+      <li>Email: nguyentranthuyduong77@email.com</li>
+      <li>GitHub: <a href="https://github.com/ThuyDuong2105" target="_blank">github.com/ThuyDuong2105</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/ThuyDuong2105" target="_blank">linkedin.com/in/ThuyDuong2105</a></li>
+    </ul>
+  </div>
 </body>
 </html>
