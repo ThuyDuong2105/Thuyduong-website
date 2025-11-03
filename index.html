@@ -3,41 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới thiệu bản thân</title>
+  <title>Giới thiệu bản thân 💗</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
-      color: #333;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9ec4, #ff5f9e);
+      color: white;
       text-align: center;
-      padding: 50px;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
     }
-    img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
+
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      margin-top: 100px;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(255, 0, 90, 0.3);
     }
+
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      margin-top: 20px;
+    }
+
     p {
       font-size: 1.2em;
+      margin: 15px 0;
     }
+
     a {
-      color: #333;
+      color: #ffe6f0;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    /* Hiệu ứng trái tim */
+    .heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 20px;
+      color: #fff;
+      opacity: 0.8;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="https://via.placeholder.com/150" alt="Ảnh đại diện">
-  <h1>Xin chào, mình là Nguyễn Trần Thùy Dương 👋</h1>
-  <p>Mình là một lngười học khá với môn này và mình đã có hơn 1000000 năm kinh nghiệm trong nền lĩnh vực này.</p>
-  <p>Bạn có thể kết nối với mình qua:SĐT 01234567891
-    <a href="https://linkedin.com/in/ThuyDuong2105" target="_blank">LinkedIn</a> |
-    <a href="mailto:nguyentranthuyduong77@gmail.com">Email</a>
-  </p>
+  <h1>💗 Xin chào, mình là Nguyễn Trần Thùy Dương 💗</h1>
+  <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="Ảnh đại diện">
+  <p>💪 tôi là môt cô gái xinh đẹp và đảm đang.</p>
+  <p>🌸 Sở thích:nấu ăn, thích tiêu tiền mua quần áo .</p>
+  <p>📧 Email: <a href="mailto:nguyentranthuyduong77@gmail.com">nguyentranthuyduong77@gmail.com</a></p>
+  <p>🌐 GitHub: <a href="https://github.com/ThuyDuong2105">github.com/ThuyDuong2105</a></p>
+
+  <footer>💖 Made with love by Nguyễn Trần Thùy Dương💖</footer>
+
+  <script>
+    // Tạo hiệu ứng trái tim bay
+    const body = document.body;
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+      heart.innerHTML = '💗';
+      body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+    setInterval(createHeart, 500);
+  </script>
 </body>
 </html>
